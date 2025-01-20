@@ -1,0 +1,95 @@
+
+.profile-container {
+    margin-top: 50px;
+  }
+
+  .profile-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #007bff;
+    margin-bottom: 20px;
+  }
+
+  .profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .profile-header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .profile-header p {
+    font-size: 1.1rem;
+    color: #6c757d;
+  }
+
+  .profile-details {
+    font-size: 1.1rem;
+  }
+
+  .profile-details p {
+    margin: 5px 0;
+  }
+  details {
+    margin-bottom: 20px;
+  }
+
+  summary {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #007bff;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    border:2px solid #007bff;
+    transition: all 0.3s ease;
+  }
+
+  summary:hover {
+    background-color: #e9f5ff;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details[open] summary {
+    background-color: #5197e1;
+    color: white;
+    border-color: #0056b3;
+  }
+
+    .d-card {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    margin-top: 2%;
+  }
+  table {
+    width: 100%;
+     
+  }
+  th{
+    border-right: 1px solid ;
+  }
+  td{
+    position: relative;
+    left: 5%;
+  }
+  tr{
+    border-bottom: 1px solid;
+  }

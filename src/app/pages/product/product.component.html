@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="p-2">
+    <div class="row mt-2">
+       <div class="col-md-8 mt-1">
+        <h4>Product Table</h4>
+       </div>
+       
+       <div class="col-md-12 mt-2">
+        <p-table
+                [value]="products"
+                [paginator]="true"
+                [rows]="10"
+                [tableStyle]="{ 'min-width': '50rem' }"
+                [rowsPerPageOptions]="[10, 20, 30,50,100,200]"
+            >
+                <ng-template #header>
+                    <tr>
+                        <th >Id</th>
+                        <th >Title</th>
+                        <th >Description</th>
+                        <th >Catagory</th>
+                        <th >Price (USD)</th>
+                        <th >Image</th>
+                       
+                    </tr>
+                </ng-template>
+                <ng-template #body let-product>
+                    <tr>
+                        <td>{{ product.id }}</td>
+                        <td>{{ product.title }}</td>
+                        <td>{{ product.description }}</td>
+                        <td>{{ product.category }}</td>
+                        <td>$ {{ product.price }}</td>
+                        <td><img [src]="product.images" width="50px" alt="img"></td>
+                      
+                    </tr>
+                </ng-template>
+            </p-table>
+    </div>
+</div>
+</div>

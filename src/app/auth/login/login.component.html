@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row log">
+        <div class="col-md-12">
+            <div class="login-container">
+                <h2>Login</h2>
+                <form [formGroup]="loginForm" class="row">
+                    <div class="col-md-12 mt-4">
+                        <p-floatlabel variant="on">
+                            <input pInputText id="username" formControlName="username" autocomplete="off" />
+                            <label for="username">User Name</label>
+                        </p-floatlabel>
+                        @if(loginForm.controls['username'].invalid && loginForm.controls['username'].touched){
+                            <p-message severity="error" class="mt-2">Enter UserName</p-message>
+                        }
+                    </div>
+                    <div class="col-md-12 mt-3">
+                        <p-floatlabel variant="on">
+                            <input pInputText id="password" formControlName="password" autocomplete="off" />
+                            <label for="password">Password</label>
+                        </p-floatlabel>
+                        @if(loginForm.controls['password'].invalid && loginForm.controls['password'].touched){
+                            <p-message severity="error" class="mt-2">Enter Password</p-message>
+                        }
+                    </div>
+                    <div class="col-md-12 mt-3 text-center">
+                        <p-button label="Log in" variant="text" (click)="loginUser()" [disabled]="loginForm.invalid" [raised]="true" severity="info" />
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

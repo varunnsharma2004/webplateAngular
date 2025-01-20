@@ -1,0 +1,138 @@
+<app-header></app-header>
+<div class="container profile-container">
+    <h4>My Profile </h4>
+    <div class="profile-card">
+        @for (user of userData; track $index) {
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="text-center">
+
+                    <img [src]='user.image' alt="Profile Image" class="profile-img">
+                </div>
+                <div class="profile-header">
+                    <h1>{{user.firstName}} {{user.maidenName?user.maidenName:''}} {{user.lastName}}</h1>
+                    <p>{{user.role}}</p>
+                </div>
+                <hr>
+            </div>
+            <div class="col-md-12 mt-2">
+                    <h4>User Information</h4>
+                    <div class="d-card">
+                        <table>
+                            <tr>
+                                <th>User Name</th>
+                                <td>{{user.username}}</td>
+                            </tr>
+                            <tr>
+                                <th>Email</th>
+                                <td> {{user.email}}</td>
+                            </tr>
+                            <tr>
+                                <th>Mobile No.</th>
+                                <td>{{user.phone? user.phone:'Na'}}</td>
+                            </tr>
+                            <tr>
+                                <th>BOD</th>
+                                <td>{{user.birthDate}}</td>
+                            </tr>
+                            <tr>
+                                <th>Age</th>
+                                <td>{{user.age}}</td>
+                            </tr>
+                            <tr>
+                                <th>gender</th>
+                                <td>{{user.gender}}</td>
+                            </tr>
+                            <tr>
+                                <th>bloodGroup</th>
+                                <td>{{user.bloodGroup}}</td>
+                            </tr>
+                            <tr>
+                                <th>weight</th>
+                                <td>{{user.weight}}</td>
+                            </tr>
+                            <tr>
+                                <th>height</th>
+                                <td>{{user.height}}</td>
+
+                            </tr>
+                        </table>
+                    </div>
+
+                 
+                <details class="mt-3">
+                    <summary>User Address</summary>
+                    <div class="d-card">
+
+                        <table>
+
+                            <tr>
+                                <th>Address</th>
+                                <td>{{user.address.address}}</td>
+                            </tr>
+                            <tr>
+                                <th>City</th>
+                                <td> {{user.address.city}}</td>
+                            </tr>
+                            <tr>
+                                <th>State.</th>
+                                <td>{{user.address.state}}</td>
+                            </tr>
+                            <tr>
+                                <th>State Code</th>
+                                <td>{{user.address.stateCode}}</td>
+                            </tr>
+                            <tr>
+                                <th>Postal Code</th>
+                                <td>{{user.address.postalCode}}</td>
+                            </tr>
+                            <tr>
+                                <th>Country</th>
+                                <td>{{user.address.country}}</td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+                </details>
+                <details>
+                    <summary>User Company Details</summary>
+                    <div class="d-card">
+                        <table>
+                            <tr>
+                                <th>Company Name</th>
+                                <td>{{user.company.name}}</td>
+                            </tr>
+                            <tr>
+                                <th>Title</th>
+                                <td>{{user.company.title}}</td>
+                            </tr>
+                            <tr>
+                                <th>Department</th>
+                                <td>{{user.company.department}}</td>
+                            </tr>
+                            <tr>
+                                <th>Company Address</th>
+                                <td>{{user.company.address.address}}</td>
+                            </tr>
+                            <tr>
+                                <th>City</th>
+                                <td>{{user.company.address.city}}</td>
+                            </tr>
+                            <tr>
+                                <th>Postal Code</th>
+                                <td>{{user.company.address.postalCode}}</td>
+                            </tr>
+                            <tr>
+                                <th>Country</th>
+                                <td>{{user.company.address.country}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </details>
+            </div>
+        </div>
+        }
+
+    </div>
+</div>
